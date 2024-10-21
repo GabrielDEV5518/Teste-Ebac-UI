@@ -12,7 +12,7 @@ describe('funcionalidade: login', () => {
 
 
 
-    it ( 'Deve fazer o login com sucesso', () => {
+    it( 'Deve fazer o login com sucesso', () => {
          cy.get('#username').type('gabriel-teste@gmail.com')
          cy.get('#password').type('32247443gb')
          cy.get('.woocommerce-form > .button').click()
@@ -20,7 +20,7 @@ describe('funcionalidade: login', () => {
     })
 
 
-    it('deve exibir uma mensagem de erro ao inserir um usúario invalido', () => {
+    it.only('deve exibir uma mensagem de erro ao inserir um usúario invalido', () => {
          cy.get('#username').type('chuchu@gmail.com')
          cy.get('#password').type('32247443gb')
          cy.get('.woocommerce-form > .button').click()
@@ -34,12 +34,6 @@ describe('funcionalidade: login', () => {
          cy.get('.woocommerce-form > .button').click()
          cy.get('.woocommerce-error').should('contain' , 'A senha fornecida para o e-mail gabriel-teste@gmail.com está incorreta.')
     });     
-
-
-
-
-
-
 
     
 
