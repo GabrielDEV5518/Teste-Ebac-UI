@@ -28,6 +28,12 @@ describe('Funcionalidade: Cadastro', () => {
         cy.get('.woocommerce-message').should('exist')
      });
 
+it.only('Deve fazer o cadastro com sucesso - usando comando customizado', () => {
+    cy.preCadastro(faker.internet.email(), '0000', faker.person.firstName(), faker.person.lastName())
+    cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
+
+});
+       
 
 
 });

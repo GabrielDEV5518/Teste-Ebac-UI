@@ -11,6 +11,7 @@ describe('Funcionalidade: Produtos', () => {
         cy.get('.product-block').first()
         cy.get('.products > .row').contains('Abominable Hoodie')
         cy.get('.product-block').last()
+        
     });
 
 
